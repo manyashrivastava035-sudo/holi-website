@@ -1,32 +1,48 @@
+/* Body Styling */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423, #24c6dc);
     overflow: hidden;
     color: white;
+    height: 100vh;
+
+    background: linear-gradient(-45deg, #ff4e50, #fc913a, #f9d423, #24c6dc);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
 }
 
+/* Moving Gradient Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Container */
 .container {
     margin-top: 120px;
 }
 
+/* Heading */
 h1 {
     font-size: 60px;
     animation: glow 2s infinite alternate;
 }
 
+/* Glow Animation */
 @keyframes glow {
-    from { text-shadow: 0 0 10px #fff, 0 0 20px #ff00de; }
-    to { text-shadow: 0 0 20px #00fff2, 0 0 30px #ff00de; }
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 25px #00fff2; }
 }
 
+/* Paragraph */
 p {
     font-size: 22px;
-    margin-bottom: 30px;
 }
 
+/* Button */
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -44,19 +60,23 @@ button:hover {
     transform: scale(1.1);
 }
 
+/* Color Splash Dots */
 .color {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     pointer-events: none;
     animation: fall linear forwards;
 }
 
+/* Falling Animation */
 @keyframes fall {
     0% { transform: translateY(-50px); opacity: 1; }
     100% { transform: translateY(100vh); opacity: 0; }
 }
+
+/* 🔥 Firework Effect */
 .firework {
     position: absolute;
     width: 10px;
@@ -75,6 +95,7 @@ button:hover {
     animation: explode 1s ease-out forwards;
 }
 
+/* Firework Explosion */
 @keyframes explode {
     0% {
         transform: scale(0.2);
