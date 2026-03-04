@@ -23,3 +23,23 @@ function startColors() {
         }, 4000);
     }
 }
+
+// Mouse splash
+document.addEventListener("mousemove", function(e) {
+    createColor(e.pageX);
+});
+
+// 🔥 Firework Effect
+function createFirework() {
+    let firework = document.createElement("div");
+    firework.classList.add("firework");
+
+    firework.style.left = Math.random() * window.innerWidth + "px";
+    firework.style.top = Math.random() * window.innerHeight / 2 + "px";
+
+    document.body.appendChild(firework);
+
+    setTimeout(() => {
+        firework.remove();
+    }, 1000);
+}
