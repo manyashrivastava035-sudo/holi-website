@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif;
     text-align: center;
+    font-family: Arial, sans-serif;
     color: white;
-    background: linear-gradient(-45deg, #ff4e50, #fc913a, #f9d423, #e1f5c4);
+
+    background: linear-gradient(-45deg, #ff4e50, #fc913a, #f9d423, #24c6dc);
     background-size: 400% 400%;
     animation: gradientMove 8s ease infinite;
 }
@@ -17,9 +18,9 @@ body {
 }
 
 h1 {
-    margin-top: 100px;
+    margin-top: 120px;
     font-size: 60px;
-    text-shadow: 2px 2px 10px black;
+    text-shadow: 2px 2px 15px black;
 }
 
 button {
@@ -39,6 +40,7 @@ button:hover {
     color: white;
 }
 
+/* Color Splash */
 .color {
     position: absolute;
     width: 20px;
@@ -52,6 +54,7 @@ button:hover {
     100% { transform: translateY(800px); opacity: 0; }
 }
 
+/* Fireworks */
 .firework {
     position: absolute;
     width: 8px;
