@@ -1,17 +1,17 @@
 const btn = document.getElementById("celebrateBtn");
-const music = document.getElementById("bgMusic");
 
+// Create a new Audio object dynamically inside click
 btn.addEventListener("click", () => {
+    const music = new Audio("holi.mp3");
+    music.loop = true;
+    music.volume = 1.0;
 
-    // Play music
-    if (music.paused) {
-        music.currentTime = 0; // start from beginning
-        music.play().then(() => {
-            console.log("Music started ✅");
-        }).catch(err => {
-            console.log("Music play blocked:", err);
-        });
-    }
+    // Try to play music after button click
+    music.play().then(() => {
+        console.log("Music started ✅");
+    }).catch(err => {
+        console.log("Music blocked:", err);
+    });
 
     // Fireworks + color splash
     for (let i = 0; i < 120; i++) createColor(Math.random() * window.innerWidth);
